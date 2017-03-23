@@ -6,6 +6,7 @@ ENV PYTHONUNBUFFERED 1
 COPY ./requirements /requirements
 
 RUN pip install -r /requirements/production.txt \
+    && pip install -r /requirements/local.txt
     && groupadd -r django \
     && useradd -r -g django django
 
