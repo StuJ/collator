@@ -1,5 +1,6 @@
 # Test dependencies go here.
 -r base.txt
+-r local.txt
 
 # Python-PostgreSQL Database Adapter
 # If using Win for dev, this assumes Unix in test/prod
