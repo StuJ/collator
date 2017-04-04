@@ -1,4 +1,4 @@
-sudo: true
+sudo: required
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq build-essential gettext python-dev zlib1g-dev libpq-dev xvfb
@@ -6,10 +6,12 @@ before_install:
   - sudo apt-get install -qq graphviz-dev python-setuptools python3-dev python-virtualenv python-pip
   - sudo apt-get install -qq firefox automake libtool libreadline6 libreadline6-dev libreadline-dev
   - sudo apt-get install -qq libsqlite3-dev libxml2 libxml2-dev libssl-dev libbz2-dev wget curl llvm
+services:
+  - docker
 install:
-  - pip install -r requirements/test.txt
+  - docker-compose -f dev.yml build
+  - docker-compose -f dev.yml up
 language: python
 python:
 - "3.5"
 script: pytest
-
