@@ -10,7 +10,6 @@ services:
   - docker
 install:
   - docker-compose -f dev.yml build
-  - docker-compose -f dev.yml up
 language: python
 python:
 - "3.5"
