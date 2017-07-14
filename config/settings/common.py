@@ -46,7 +46,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     # custom users app
     'collator.users.apps.UsersConfig',
-    # Your stuff: custom apps go here
+    'collator.core.apps.CoreConfig',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
