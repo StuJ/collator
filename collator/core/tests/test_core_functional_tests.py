@@ -13,7 +13,6 @@ class NewVisitorTest(unittest.TestCase):
     def test_can_create_node_and_retrieve_it_later(self):
 
         self.browser.get('http://localhost:8000')
-
         self.assertIn('Collator', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('Collator', header_text)
