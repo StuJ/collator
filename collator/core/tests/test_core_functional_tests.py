@@ -15,7 +15,10 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 
         self.assertIn('Collator', self.browser.title)
-        self.fail('Finish the test!')
+        header_text = self.browser.find_element_by_tag_name('h1').text
+        self.assertIn('Collator', header_text)
+        body_text = self.browser.find_element_by_tag_name('h4').text
+        self.assertIn('Organise', body_text)
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
