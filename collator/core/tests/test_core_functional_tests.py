@@ -11,7 +11,6 @@ class NewVisitorTest(unittest.TestCase):
     def tearDown(self):
         self.browser.quit()
 
-    # Unfinished (also is this in the right place?)
     def test_can_create_node_and_retrieve_it_later(self):
 
         # Homepage is loaded

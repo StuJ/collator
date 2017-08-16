@@ -4,6 +4,12 @@
 <h1>Collator</h1>
 <h4>Organise and develop your thoughts</h4>
 
+<h4>Nodes</h4>
 
+<h4>Add a node</h4>
+<form method="POST">
+  {% csrf token %}
+  <input name="node_name" id="id_new_node" placeholder="Add a new node..."/>
+</form>
 
 {% endblock content %}
