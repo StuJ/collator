@@ -5,11 +5,14 @@
 <h4>Organise and develop your thoughts</h4>
 
 <h4>Nodes</h4>
+<div class="homepage_node">
+  <h5>{{ new_node_name }}</h5>
+</div>
 
 <h4>Add a node</h4>
 <form method="POST">
-  {% csrf token %}
   <input name="node_name" id="id_new_node" placeholder="Add a new node..."/>
+    {% csrf_token %}
 </form>
 
 {% endblock content %}
